@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/clouds_in_sky_portrait"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="@color/best"
+        android:text="addition" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/best"
+        android:text="subtraction" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/best"
+        android:text="multiplication" />
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewIdA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:visibility="visible"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-9672823333355229/2264948872"
+        tools:visibility="visible">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>
