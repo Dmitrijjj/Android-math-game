@@ -11,13 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.Locale;
 import java.util.Random;
 
@@ -48,18 +41,10 @@ public class GameAddition extends AppCompatActivity {
 
     String s = "";
 
-    private AdView adView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_addition);
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
 
         textViewScore = findViewById(R.id.textViewScore);
         life = findViewById(R.id.textViewlife);
@@ -68,10 +53,6 @@ public class GameAddition extends AppCompatActivity {
         editAnswer = findViewById(R.id.editTextAnswer);
         ok = findViewById(R.id.buttonOk);
         next = findViewById(R.id.buttonNext);
-
-        adView = findViewById(R.id.adViewIdA);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
         showQuestion();
 

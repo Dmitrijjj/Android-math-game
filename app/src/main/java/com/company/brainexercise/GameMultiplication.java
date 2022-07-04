@@ -11,12 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.Locale;
 import java.util.Random;
 
@@ -47,19 +41,10 @@ public class GameMultiplication extends AppCompatActivity {
 
     String s = "";
 
-    private AdView adView;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_multiplication);
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
 
         textViewScore = findViewById(R.id.textViewScoreMul);
         life = findViewById(R.id.textViewLIfeMul);
@@ -68,10 +53,6 @@ public class GameMultiplication extends AppCompatActivity {
         editAnswer = findViewById(R.id.editTextMul);
         ok = findViewById(R.id.buttonOkMul);
         next = findViewById(R.id.buttonNextMul);
-
-        adView = findViewById(R.id.adViewIdM);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
         showQuestion();
 

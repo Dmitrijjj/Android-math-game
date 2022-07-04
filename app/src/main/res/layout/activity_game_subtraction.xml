@@ -113,17 +113,4 @@
             android:text="next question" />
     </LinearLayout>
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adViewIdS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="400dp"
-        android:visibility="visible"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-9672823333355229/2264948872"
-        tools:visibility="visible">
-
-    </com.google.android.gms.ads.AdView>
-
 </LinearLayout>
